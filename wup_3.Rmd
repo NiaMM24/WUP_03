@@ -40,6 +40,7 @@ basicCN + geom_boxplot(notch=TRUE,outlier.color = "red") + stat_boxplot(geom ='e
 
 There are "bites" on the boxes that are on the plot above. They represent the standart deviation, which is the amount of deviations among the data.
 
+
 ## Numerical Summarys 
 
 ```{r}
@@ -51,6 +52,14 @@ This is three times the average number of drinks for those who are seated in the
 This is also nine times average number of drinks for those who are seated in the front.
 
 ## Inferential Tests
+
+```{r}
+model1 <- aov(alcohol~Seat,data=davisdata)
+summary.aov(model1)
+```
+
+The one way anova inferential test  shows a small p-value which is 0.000116, which means that there is a probability of having no difference between alcohol consumed between the front, middle and back rows that are available for people to be seated in.
+
 
 ## Conclusions
 
